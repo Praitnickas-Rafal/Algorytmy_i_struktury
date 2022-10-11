@@ -12,9 +12,9 @@
 int main(void){
 	
     int n;
-    double a, x[n], y[n];
     printf("Prosze, podac dlugosc tablicy:");
     scanf("%d", &n);
+    double a, x[n], y[n];
     
     printf("Prosze, podac a:");
     scanf("%lf", &a);
