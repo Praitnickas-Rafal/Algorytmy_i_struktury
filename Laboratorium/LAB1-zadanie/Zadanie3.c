@@ -12,9 +12,9 @@ Laboratorium 1. Obliczyc funkcja y = ax^2 znaczenia, gdy a - stale, x jest wybie
 int main(void){
 	
     int n;
-    double a, x[n], y;
     printf("Prosze, podac dlugosc tablicy:");
     scanf("%d", &n);
+    double a, x[n], y;
     
     printf("Prosze, podac a:");
     scanf("%lf", &a);
