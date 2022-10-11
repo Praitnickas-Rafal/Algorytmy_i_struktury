@@ -1,7 +1,7 @@
 /*
 Rafal Praitnickas, Student
 ************************************
-Obliczyc funkcja y = ax^2 znaczenia, gdy a - stale. x - zmieniase z x0 do xn, krokiem hx
+Laboratorium 1. Obliczyc funkcja y = ax^2 znaczenia, gdy a - stale. x - zmieniase z x0 do xn, krokiem hx
 ***********************************
 2022.10.11
 */
@@ -14,7 +14,6 @@ int main(void){
 float a, y;
 float x = 0, x_od_przedzialu = 0, x_do_przedzialu = 0;
 float xh = 0; //czyli kroki
-int n=0;
 	
 	do {
 		printf("Prosze, Podac a:\n"); 
