@@ -1,4 +1,4 @@
-# Zadanie3
+# Zadanie trzecie
 ## Pseudokod NWD
 ```
 NWD(liczba1, liczba2)
