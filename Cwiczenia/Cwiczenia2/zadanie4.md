@@ -1,3 +1,5 @@
+# Zadanie czwarta
+## Srednia pseudokod
 ```
 Obliczenia_srednej(n, tab){
   suma = 0
@@ -10,6 +12,9 @@ Obliczenia_srednej(n, tab){
   srednia = tab[i] / n
   return srednia
 }
+```
+## Udowodnienie
+```
 ```
 
 
