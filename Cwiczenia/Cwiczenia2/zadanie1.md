@@ -1,5 +1,5 @@
 # Zadanie pierwsze
-## Factorial pseukodokod
+## Factorial pseudokod
 ```
 factorial(liczba){
   i = 0
