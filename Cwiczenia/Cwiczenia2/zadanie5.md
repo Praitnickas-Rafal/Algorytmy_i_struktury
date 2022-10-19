@@ -1,6 +1,6 @@
-# Zadanie 5
+# Zadanie piąte
 
-## Znachodzi najmniejsza liczbe
+## Minimalny pseudokod
 ```
 min(Tablica[], dlugosc){
 
@@ -16,7 +16,10 @@ min(Tablica[], dlugosc){
     return min
 }
 ```
-## Znachodzi najwieksza liczbe
+## Udowodnienie
+## Maxsimalny pseudokod
+```
+```
 ```
 max(Tablica[], dlugosc){
 
@@ -31,4 +34,7 @@ max(Tablica[], dlugosc){
     }
     return max
 }
+```
+## Udowodnienie
+```
 ```
