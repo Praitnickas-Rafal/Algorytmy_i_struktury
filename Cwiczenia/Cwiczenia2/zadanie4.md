@@ -1,4 +1,4 @@
-# Zadanie czwarta
+# Zadanie czwarte
 ## Srednia pseudokod
 ```
 Obliczenia_srednej(n, tab){
