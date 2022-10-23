@@ -50,6 +50,10 @@ Dowód:
 <img width="417" alt="image" src="https://user-images.githubusercontent.com/115026306/197416501-55472261-c539-4a9f-ba61-ca7c78ebd5a0.png">
 
 ```
+Za pomoca założenie my podstowujemy 12 i 4 i obliczamy
+```
+
+```
 Stąd wychodzi że prawa strona jest równa lewa, i może stego zrozumieć że algorytm jest całkowicie 
 poprawny za pomoca założenia matematycznej
 ```
