@@ -19,7 +19,7 @@ factorial(lic){
 Q (warunek wstępny): i = 0 oraz silnia = 1
 B (warunek zatrzymania): while ( i < lic)
 S (ciało pętli): silnia *= i oraz i++
-R (warunek końcowy): test_wzoru
+R (warunek końcowy): 
 Niezmiennik(i, silnia) = 0 =< i =< lic
 ```
 ## Wlasnosć stopu
@@ -46,7 +46,7 @@ Załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowoln
 - Na końcu dowolnej iteracji i niezmiennik będący prawdą oznacza, że iloczyn jest iloczynem 
 pierwszych i elementów silnia.
 
-- Po jeszcze jednej iteracji dodajemy silnia[i]  do sumy, dlatego suma staje się suma 
+- Po jeszcze jednej iteracji mnozemy silnia[i]  do iloczynu, dlatego iloczyn staje się suma 
 pierwszych i + 1 elementów silnia.
 
 - Aby "naprawić to", musimy zwiększyć i o 1
@@ -60,6 +60,5 @@ Załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowoln
 Indeksu dolnego 0 używamy dla wartości przed iteracją, a 1 dla wartości po iteracji.
 
 Zakładamy dwie rzeczy, niezmiennik i warunek zatrzymania przed pętlami
-
-
 ```
+$ Niezmiennik( i _{0} , silnia _{1} ) = 0 \leq i _{0} \leq \Lambda silnia _{1} = \sum_{k=0}^i _{0} silnia [k] $
