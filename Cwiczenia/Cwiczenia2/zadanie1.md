@@ -14,51 +14,16 @@ factorial(lic){
 }
 ```
 # Udowodnienie factoriala
-## Pętla
-```
-Q (warunek wstępny): i = 0 oraz silnia = 1
-B (warunek zatrzymania): while ( i < lic)
-S (ciało pętli): silnia *= i oraz i++
-R (warunek końcowy): 
-Niezmiennik(i, silnia) = 0 =< i =< lic
-```
-## Wlasnosć stopu
-```
-- algorytm zatrzyma się, kiedy zajdzie i =< len - jest iteracja i oraz lic skończoną liczbą naturalną
-- lic jest stała i skończoną liczbą naturalną - tak
-- wartość zmiennej i rośnie o 1 każdej iteracji - tak
-```
-## Przypadek podstawowy
-```
-Udowdnimy że niezmiennik pętli jest prawdziwy po osiągnieciu pętli
 
-1. Na starcie pętli i = 0 oraz silnia = 1
-2. Niezmiennik(0, 1) = 0 =< 1 =< lic test_wzoru
-3. Obydwa tych założenia są prawdziwe
-```
-# Krok indukcii
+## indukcja matematyczna 
 
-## Nieformalnie
+<img width="674" alt="image" src="https://user-images.githubusercontent.com/115026306/197411917-2c1d24eb-e4ea-4476-ac86-d62b28a6cc53.png">
+
+<img width="674" alt="image" src="https://user-images.githubusercontent.com/115026306/197411930-d585e9d9-1223-400c-a267-676f0af42c6f.png">
+
+<img width="673" alt="image" src="https://user-images.githubusercontent.com/115026306/197411969-bbf9cb36-ffad-4e10-936b-3f768d5704ee.png">
 
 ```
-Załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnej iteracji.
-
-- Na końcu dowolnej iteracji i niezmiennik będący prawdą oznacza, że iloczyn jest iloczynem 
-pierwszych i elementów silnia.
-
-- Po jeszcze jednej iteracji mnozemy silnia[i]  do iloczynu, dlatego iloczyn staje się suma 
-pierwszych i + 1 elementów silnia.
-
-- Aby "naprawić to", musimy zwiększyć i o 1
-- dokładnie to robi pętla
-- więc niezmiennik pętli pozostaje prawdziwy
+Stąd wychodzi że algorytm liczy cześciowo poprawnie i  jest całkowicie poprawny z udowodnienia przez matematyczna indukcji.
 ```
-## Formalnie
-```
-Załóżmy, że niezmiennik i warunek zatrzymania są prawdziwe na końcu dowolnej iteracji.
 
-Indeksu dolnego 0 używamy dla wartości przed iteracją, a 1 dla wartości po iteracji.
-
-Zakładamy dwie rzeczy, niezmiennik i warunek zatrzymania przed pętlami
-```
-$ Niezmiennik( i _{0} , silnia _{1} ) = 0 \leq i _{0} \leq \Lambda silnia _{1} = \sum_{k=0}^i _{0} silnia [k] $
