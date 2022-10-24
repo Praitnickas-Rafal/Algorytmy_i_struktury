@@ -31,7 +31,7 @@ wprowadziłyśmy x, y, z i zostało podzielona przez 3, bo są trzy niewiadome
 <img width="131" alt="image" src="https://user-images.githubusercontent.com/115026306/197415884-4af7290d-27a1-4961-a550-2966023a0e42.png">
 
 ```
-wprowadziłyśmy r, w i zostało podzielona przez 2, bo są trzy niewiadome
+wprowadziłyśmy r, w i zostało podzielona przez 2, bo są dwa niewiadome
 ```
 <img width="167" alt="image" src="https://user-images.githubusercontent.com/115026306/197416590-6ec36f99-999d-45a0-a801-a3d8e8dc5104.png">
 
