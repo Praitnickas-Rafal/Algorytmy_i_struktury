@@ -44,10 +44,10 @@ int findMin(int *arr);
 void printTable(int *arr);
 
 void main(void) {
-  int arr[100] = {4.1,5.1,9.5,8.7,7.5,4.0};
+  int arr[100] = {4.4,5.4,9.9,8.8};
   // realizacja
 
-  int pozycja = find(5.1, arr);
+  int pozycja = find(5.4, arr);
   printf("Pozycja: %d\n", pozycja);
   int max = findMax(arr);
   printf("Maksimum: %d\n", max);
