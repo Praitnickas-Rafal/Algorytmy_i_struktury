@@ -24,7 +24,7 @@ int size(ItemType *head);                       // zmieniłem int na ItemType
 
 int findMax(ItemType **head);                   // zmieniłem i dobawiłem
 
-int findMin(ItemType *head);                    // zmieniłem i dobawiłem
+int findMin(ItemType **head);                   // zmieniłem i dobawiłem
 
 void printList(ItemType *head);                 // zmieniłem na void
 
@@ -71,7 +71,7 @@ int main(void) {
   /*-----------------------------------------------------*/
   // sprawdzamy funkcyje insert(head, number, position)
 
-  insert(&head, 7, 1); 
+  insert(&head, -7, 1); 
   printList(head);
 
   /*-----------------------------------------------------*/
@@ -104,7 +104,7 @@ int main(void) {
   /*-----------------------------------------------------*/
   // sprawdzamy funkcyje findMin(head)
 
-  int min = findMin(head); 
+  int min = findMin(&head); 
   printf("\n min: %d \n", min);
 
   /*-----------------------------------------------------*/
@@ -242,8 +242,9 @@ int find(float value, ItemType *head) {
 
 int findMax(ItemType **head) {
   ItemType *current;
-  int max = 0;
+  int max;
   current = *head;
+  max = current->value;
 
   while (current != NULL) {
     if (current->value > max) {
@@ -253,13 +254,18 @@ int findMax(ItemType **head) {
   }
   return max;
 }
-int findMin(ItemType *head) {
 
-  int min = head->value;
+int findMin(ItemType **head) {
+  ItemType *current;
+  int min;
+  current = *head;
+  min = current->value;
 
-  while (head->value < min) {
-    min = head->value;
-    head = head->next;
+  while (current != NULL) {
+    if (current->value < min) {
+      min = current->value;
+    }
+    current = current->next;
   }
   return min;
 }
