@@ -11,39 +11,39 @@ typedef struct Item {
   struct Item *next;
 } ItemType;
 
-int find(float value, ItemType *head); //zmieniłem int *head na itemtype *head
+int find(float value, ItemType *head);        //zmieniłem int *head na itemtype *head
 
-int locate(float value, int *head); //???
+int locate(float value, int *head);           //???
 
-int retrieve(ItemType *item, int *head); //???
+int retrieve(ItemType *item, int *head);      //???
 
 void insert(ItemType **head, float value, 
-            int position); // zmieniłem i dobawiłem
+            int position);                    // zmieniłem i dobawiłem
 
 void remove1(ItemType **head,
-             int position); // zmieniłem ItemType *head na int position i do
-                            // headu dobawiłem jeszcze jeden pointer
+             int position);                   // zmieniłem ItemType *head na int position i do
+                                              // headu dobawiłem jeszcze jeden pointer
 
-int size(ItemType *head); // zmieniłem int na ItemType
+int size(ItemType *head);                     // zmieniłem int na ItemType
 
-int findMax(ItemType **head); //zmieniłem i dobawiłem
+int findMax(ItemType **head);                 //zmieniłem i dobawiłem
 
-int findMin(ItemType *head);  //zmieniłem i dobawiłem
+int findMin(ItemType *head);                  //zmieniłem i dobawiłem
 
-void printList(ItemType *head); // zmieniłem na void
+void printList(ItemType *head);               // zmieniłem na void
 
-int isEmpty(ItemType *head); //zmieniłem i dobawiłem
+int isEmpty(ItemType *head);                  //zmieniłem i dobawiłem
 
 void next(ItemType **head,
-          int cyfra); //?? next co?? czyli na koniec dodaj element? zmieniłem
-                      //ItemType *head na int cyfra i do headu dobawiłem jeszcze
-                      //jeden pointer
+          int cyfra);                         //?? next co?? czyli na koniec dodaj element? zmieniłem
+                                              //ItemType *head na int cyfra i do headu dobawiłem jeszcze
+                                              //jeden pointer
 
 void previous(ItemType **head,
-              float value); // zmieniłem ItemType *head na float value i do headu
-                          // dobawiłem jeszcze jeden pointer
+              float value);                    // zmieniłem ItemType *head na float value i do headu
+                                              // dobawiłem jeszcze jeden pointer
 
-int makeNull(int *head);
+int makeNull(int *head);                      //???
 
 int main(void) {
 
