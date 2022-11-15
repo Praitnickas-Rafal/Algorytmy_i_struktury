@@ -45,9 +45,9 @@ int main(void) {
   /*-----------------------------------------------------*/
   // sprawdzamy funkcyji previuos(head, number) i printlist()
   
-  previous(&head, 6); 
-  previous(&head, 5);
-  previous(&head, 8);
+  previous(&head, 6.0); 
+  previous(&head, 5.0);
+  previous(&head, 8.0);
   printList(head);
 
   /*-----------------------------------------------------*/
@@ -65,13 +65,13 @@ int main(void) {
   /*-----------------------------------------------------*/
   // sprawdzamy funkcyje next(head, number)
 
-  next(&head, 5); 
+  next(&head, 5.0); 
   printList(head);
 
   /*-----------------------------------------------------*/
   // sprawdzamy funkcyje insert(head, number, position)
 
-  insert(&head, -7, 1); 
+  insert(&head, -7.0, 1); 
   printList(head);
 
   /*-----------------------------------------------------*/
