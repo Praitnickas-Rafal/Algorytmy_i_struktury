@@ -1,12 +1,11 @@
 # Pseudokod ciągu arytmcznego
 ```
-Arytm(n){
-  a = 0
-  if (n >= 1)
+Arytm(n, a, d){
+  if (n = 1)
 {
-  return a = 2n + 2
+  return a
 }else{
-  return n
+  return Arytm(n-1, a, d) + d
  }
 }
 
