@@ -1,3 +1,22 @@
+# Prior
+```
+prior(array, X, Y)
+{
+  if (array[X] <= array[Y]){
+    return true 
+  }
+    return false
+}
+```
+# Swap 
+```
+swap(arr, X, Y)
+{
+    tem = arr[X]
+    arr[X] = arr[Y]
+    arr[Y] = tem
+}
+```
 # Sortowanie bąbelkowe
 ```
 Buble(arr, rozmiar)
