@@ -19,12 +19,14 @@ swap(arr, X, Y)
 ```
 # Sortowanie przez wstawianie
 ```
-insertion(arr, rozmiar) {
-   for (i= 0; i < n - 1; i++) {
-		for (j = i; j > 0 && prior(array[j], array[j-1]); j--) {
-			swap(array, j, j-1);
-    }
-  }
+insertion(arr) {
+   for (i= 0; i < n - 1; i++) 
+   {
+   	for (j = i; j > 0 && prior(arr[j], arr[j-1]); j--) 
+   	{
+	swap(arr, j, j-1);
+   	}
+   }
 }
 ```
 # Komentarz
