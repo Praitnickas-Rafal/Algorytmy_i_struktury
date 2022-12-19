@@ -21,16 +21,16 @@ swap(arr, X, Y)
 ```
 selection(arr) 
 {
-   for (i= 0; i < n - 1; i++)
+for (i= 0; i < n - 1; i++)
    {
-		lowIndex = i;
-		for (j = n-1; j > i; j--) 
+    lowIndex = i
+    for (j = n-1; j > i; j--) 
     {
-     if (prior(array[j], array[lowIndex])) 
-     {
-				lowIndex = j
-				swap(array, i, lowIndex);
-		 }
+     	if (prior(arr[j], arr[lowIndex])) 
+     	{
+	lowIndex = j
+	swap(arr, i, lowIndex)
+     	}
     }
    }
 }
