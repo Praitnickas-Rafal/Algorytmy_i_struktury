@@ -4,6 +4,6 @@
 
 int swap(int *arr, int X, int Y) {
   int temp = arr[X];
-  array[index1] = arr[Y];
-  array[index2] = temp;
+  arr[X] = arr[Y];
+  arr[Y] = temp;
 }
