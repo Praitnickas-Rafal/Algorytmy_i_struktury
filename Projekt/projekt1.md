@@ -13,27 +13,32 @@
 
 ## Zadanie
 
-Żeby rozwiązać zadanie i napisać program, musimy wziąść przykładowy zadanie, co trzeba do tego i jaka jest podstawową ideja programu.
+Żeby rozwiązać zadanie i napisać program, musimy wziąść przykładowy zadanie,  
+co trzeba do tego i jaka jest podstawową ideja programu.
 
 ## Przykład
 
-Przekłodowa metoda jest metoda brutalna polega na tym że wszystkie wartości przechodzą w danym przedziale liczbowym i sprawdzeniu każdej z nich, czy spełnia wymagane warunki. Jeśli odpowiedz pozytywna, to znaleziona liczba jest przekazywana na wyjście.
+Przekłodowa metoda jest metoda brutalna polega na tym że wszystkie wartości   
+przechodzą w danym przedziale liczbowym i sprawdzeniu każdej z nich, czy  
+spełnia wymagane warunki. Jeśli odpowiedz pozytywna, to znaleziona liczba    
+jest przekazywana na wyjście.  
 
-Wejście: 
+Wejście:  
 
-C - całkowitych liczby
-a - początek przedziału, a należy do C
-b - koniec przedziału, b należy do C, a < b
+C - całkowitych liczby   
+a - początek przedziału, a należy do   
+b - koniec przedziału, b należy do C, a < b  
 
-Wyjście:
+Wyjście:  
 
-Liczby z przedziału [a, b], które spełniają zadane warunek
+Liczby z przedziału [a, b], które spełniają zadane warunek  
 
 Pomocnicze:
 
 i - kolejne liczby w przedziałe [a, b], i nałeży do C
 
-Tworzymy pętlę przechodzącą przez kolejne liczby w przedziale i wybierami kolejną liczbą, jeżeli program spełnie warunki to mówi zakończ.
+Tworzymy pętlę przechodzącą przez kolejne liczby w przedziale i wybierami  
+kolejną liczbą, jeżeli program spełnie warunki to mówi zakończ.
 ```
 Lista kroków:
 
@@ -45,16 +50,19 @@ Krok2: Zakończ
 ```
 ## Rozwiązanie
 
-Stosując rozwiązanie z przykładu przebiegamy przez kolejne liczby w przedziale [a, b]. Sprawdzamy każdą liczbę na podzielność przez podzielniki z P ( P - podzielniki). Jeżeli któryś z nich dzieli liczbę, to przechodzimy do następnej liczby w przedziału [a, b], przeciwnym wypadku wyprowadzamy na wyjście, jeżeli żaden nie dzieli liczby.
+Stosując rozwiązanie z przykładu przebiegamy przez kolejne liczby w przedziale [a, b].  
+Sprawdzamy każdą liczbę na podzielność przez podzielniki z P ( P - podzielniki). Jeżeli  
+któryś z nich dzieli liczbę, to przechodzimy do następnej liczby w przedziału [a, b],  
+przeciwnym wypadku wyprowadzamy na wyjście, jeżeli żaden nie dzieli liczby.
 
-Wejście: 
+#### Wejście: 
 
 a - początek przedziału, a $\in C$  
 b - koniec przedziału, b $\in C$  
 n - liczba podzielników, n $\in N$  
 P - tablica, której kolejne elementy są podzielnikami. P $\in C$
 
-Wyjście:
+#### Wyjście:
 
 Kolejne licby z przedziału [a, b] niepodzielne przez żaden z podzielników w tablicy P. 
 
@@ -63,12 +71,18 @@ Zmienne pomocnicze:
 X - przechodzi przez kolejne liczby w przedziale [a, b] X $\in C$   
 index - przechodzi przez indeksy podzielników w tablicy P. index $\in N$.
 
-## Lista kroków
+#### Lista kroków
 ```
-pętla przebiegająca przez kolejne liczby z [a, b] pętla która sprawdza podzielność przez dzielniki z P jeśli jakiś dzielnik dzieli X to przechodzimy do następnej liczby, wprzyciwnym wypadku jeżeli żaden dzielnik nie dzieli X, wyprowadzamy komunikat w zawarciu X. 
-```
-```
-Krok1: Dla
+Krok1: pętla przebiegająca przez kolejne liczby z [a, b] 
+
+Krok2: pętla która sprawdza podzielność przez dzielniki z P 
+
+Krok3: jeśli jakiś dzielnik dzieli X to przechodzimy do następnej liczby, 
+       w przyciwnym wypadku jeżeli żaden dzielnik nie dzieli X
+
+Krok4: wyprowadzamy X
+
+Krok5: Zakończ program 
 ```
 
 ## Pseudokod
