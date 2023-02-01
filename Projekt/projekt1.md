@@ -86,5 +86,31 @@ Krok5: Zakończ program
 ```
 
 ## Pseudokod
+```
+Algorytm(){
+       a, b, n   
+       i = 0, j = 0  
+       P[1000]
+       bool t
+       wprowadz(a, b, n)
+       
+       for( i; i < n; i++ )
+          wprowadz(P[i])
+       for( i=a; i<=b; i++ )
+       { 
+          t = true
+          for( j; j < n; j++ )
+              if( i % P[j] == 0 )
+              {
+                 t = false
+                 break
+              }
+              if(t) wyprowadz(i)
+       }
+       zakończ
+ }
+```
+####Program C języku
+[-klikni żeby zobaczyć](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/ProgramyProjeku/Algorytm.c)
 
 
