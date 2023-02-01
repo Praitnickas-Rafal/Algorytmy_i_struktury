@@ -110,7 +110,7 @@ Algorytm(){
        zakończ
  }
 ```
-####Program C języku
+#### Program w C języku  
 [-klikni żeby zobaczyć](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/ProgramyProjeku/Algorytm.c)
 
 
