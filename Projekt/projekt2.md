@@ -33,8 +33,35 @@ przeszukiwanego tekstu i wzroca.
 
 ## Opisanie rozwiązania
 
-Zadanie znajdowania wzorca w łańcuchu rozwiązuje algorytm opracowany przez J. H. Morrisa i V.R. Pratta w 1997. W algorytmie Morrisa-Pratta (w dalniejszym opisaniu będa używał skrócenie MP)
+Zadanie znajdowania wzorca w łańcuchu rozwiązuje algorytm opracowany przez J. H.  
+Morrisa i V.R. Pratta w 1997. W algorytmie Morrisa-Pratta (w dalniejszym opisaniu    
+będa używał skrócenie MP) wykorzystuje się tablicę $/prod$, czyli jest to wyszukiwania  
+maksymalnego prefiksa-sufiksa.  
 
+Załóżmy, że szukamy pierwszego wystąpienie wzorca, czyli $p$ w danym łańcuchu tekstowym $s$.  
+W procesie porównywania kolejnych znaków łańcucha ze znakami wzorca, trafialiśmy na  
+sytuację, w której prefiks wzorca $p$, o długości $b$ znaków, pasowało do profiksu okna w    
+łańcuchu s przez pozycją $i-tą$, jednak znak $s[i]$ oznaczony na rysunku symbolem A) różni  
+się od znaku $p[b]$ (oznaczonym symbolem B), który znajduje się we wzorcu tuż za pasującym      
+prefiksem.  
+
+<img width="506" alt="image" src="https://user-images.githubusercontent.com/115026306/216096326-a036c6d3-b5f1-46ff-a170-a1e54e733918.png">
+
+Algorytm w takiej sytuacji przesuwa okno wzroca o jdeną pozcję w prawo względem przeszukiwanego  
+tekstu i zaczyna od początku porównywanie znaków wzorca $p$ ze znakami okna nie korzystając  
+zupełnie z faktu zgodności części znaków, czyli okazuje się iż wykorzystując fakt istnienia  
+pasującego nam prefiksu, możemy pominąc pewne porównania znaków bez żadnej szkody na wyniku  
+wyszukiwań. Dlatego po stwierdzeniu niezgodności okno wzorca przesuwamy, tak aby przed znakiem $s[i]$  
+znalazł się maksymalny prefiks-sufiks wzorca p:
+
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/115026306/216100496-2d935525-dc0b-4097-a500-6a6e46046565.png">
+
+Dzięki tej możliwości my pomijamy niepotrzebne porównania znaków oraz unikamy cofania się indeksu $i$  
+
+Każdy prefiks wzorca szerokość maksymalnego prefiksu-sufiksu można wyznaczyć przed rozpoczęciem  
+szukiwania - do tego właśnie celu generujemy tablicę $\prod$. Danej dlugości prefiksu $b$ możemy  
+z tej tablicy odczytać szerokość maksymalnego prefikso-sufiksu tego prefiksu, czyli w naszym wypadku  
+będzie to: $bb=\prod [b]$
 
 
 #### Wejście: 
