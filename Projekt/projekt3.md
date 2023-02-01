@@ -20,125 +20,141 @@ co trzeba do tego żeby rozwiązać zadanie i jaka jest podstawową ideja progra
 
 ## Przykład
 
-Przekłodowa metoda jest metoda brutalna polega na tym że wszystkie wartości   
-przechodzą w danym przedziale liczbowym i sprawdzeniu każdej z nich, czy  
-spełnia wymagane warunki. Jeśli odpowiedz pozytywna, to znaleziona liczba    
-jest przekazywana na wyjście.  
+Załóżmy, iż mamy daną listę jednokierunkową. Naszym zadaniem jest dodanie nowego 
+elementu na początku tej listy. Tworzymy dynamicznie w pamięci nowy element listy. 
+Wprowadzamy do niego dane. W polu next nowego elementu umieszczamy adres przechowywany 
+przez zmienną head. W ten sposób następnikiem nowego elementu stanie się obecny pierwszy 
+element listy. W zmiennej head umieszczamy adres nowego elementu. Po tej operacji początkiem   
+listy staje się nowy stworzony element. Podsumowując sen jest taki samy, tylko zadanie prosi o  
+niedodawaniu elementu na początek listy, a usunięciu jego.
 
-#### Wejście:  
+## Opisanie rozwiązanie
 
-C - całkowitych liczby   
-a - początek przedziału, a należy do   
-b - koniec przedziału, b należy do C, a < b  
+Lista jednokierunkowa w odróżnieniu od tablicy jest rozrzucona po pamięci aplikacji.  
+Jej elementy nie występują kolejno po sobie. Element poprzedni wskazuje na element  
+następny. Dlatego tak ważne jest przypisywanie odpowiednich wskaźników (pointery)  
+do nowych elementów. Uwaga i druga, jeżeli usuwamy pierwszy element (głowa/head) -  
+wystarczy ustawić nowy początek list jednokierunkowej z elementu $n$ na $n+1$, co w  
+naszym wypadku jest potrzebne.  
 
-#### Wyjście:  
+Jeśli lista jednokierunkowa jest pusta, to nic nie zrobimy, czyli nie ma co usunuć.    
+Załóżmy, że mamy daną listę jednokierunkową która ma zapełnioną liste (w końcu musimy   
+będziemy zaimplementować taką funkcje dodawanie, ponieważ bez tego program prawidłowo  
+nie będzi działać), z której początku należy usunąć element zaznaczony na rysunku kolorem  
+czerwonym.
 
-Liczby z przedziału [a, b], które spełniają zadane warunek  
+<img width="309" alt="image" src="https://user-images.githubusercontent.com/115026306/216159397-40787112-52ac-4b91-9ea9-8b8ee3fd36e9.png">
 
-Pomocnicze:
+W zmiennej head umieszczamy zawartość pola next usuwanego elementu. W ten sposób początek  
+listy jednokierunkowej rozpocznie się w następniku (next), a usuwany element zostanie wyżucony  z listy jednokierunkowej:
 
-i - kolejne liczby w przedziałe [a, b], i nałeży do C
+<img width="308" alt="image" src="https://user-images.githubusercontent.com/115026306/216159831-a870d2e7-162d-447f-b81b-c6383171d16f.png">
 
-Tworzymy pętlę przechodzącą przez kolejne liczby w przedziale i wybierami  
-kolejną liczbą, jeżeli program spełnie warunki to mówi zakończ.
-```
-Lista kroków:
+Trzecim krokiem będzi wyżucony albo może odłączony element usuwamy z pamięci listy.  
 
-Krok1: Dla i = a, a + 1, ..., b:
-       wykonuj:
-        Jeśli i spełnia warunek,
-        to wypisz i
-Krok2: Zakończ
-```
-## Rozwiązanie
+<img width="308" alt="image" src="https://user-images.githubusercontent.com/115026306/216160142-033db903-51ff-4d38-9b2d-1ea8edbcc4e2.png">
 
-Stosując rozwiązanie z przykładu przebiegamy przez kolejne liczby w przedziale [a, b].  
-Sprawdzamy każdą liczbę na podzielność przez podzielniki z P ( P - podzielniki). Jeżeli  
-któryś z nich dzieli liczbę, to przechodzimy do następnej liczby w przedziału [a, b],  
-przeciwnym wypadku wyprowadzamy na wyjście, jeżeli żaden nie dzieli liczby.
+Final otrzymujemy listę bez pierwszego elementu, czy pierwszy został usunięty z  
+listy jednokierunkowej.  
+
 
 #### Wejście: 
 
-a - początek przedziału, a $\in C$  
-b - koniec przedziału, b $\in C$  
-n - liczba podzielników, n $\in N$  
-P - tablica, której kolejne elementy są podzielnikami. P $\in C$
+head - zmienna wskazująca na początek listy jednokierunkowej.
 
 #### Wyjście:
 
-Kolejne licby z przedziału [a, b] niepodzielne przez żaden z podzielników w tablicy P. 
+Otrzymujemy listą jednokierunkową bez pierwszego elementu.
 
 Zmienne pomocnicze:  
 
-X - przechodzi przez kolejne liczby w przedziale [a, b] X $\in C$   
-index - przechodzi przez indeksy podzielników w tablicy P. index $\in N$.
+p - wskazanie elementu listy
 
 #### Lista kroków
 ```
-Krok1: pętla przebiegająca przez kolejne liczby z [a, b] 
+Krok1: p <- head
 
-Krok2: pętla która sprawdza podzielność przez dzielniki z P 
+Krok2: Jeśli p = nil (NULL)
 
-Krok3: jeśli jakiś dzielnik dzieli X to przechodzimy do następnej liczby, 
-       w przyciwnym wypadku jeżeli żaden dzielnik nie dzieli X
+Krok3: head <- (p -> next)
 
-Krok4: wyprowadzamy X
+Krok4: Usuń z pamięci element wskazany przez p
 
-Krok5: Zakończ program 
+Krok5: Zakończ program
 ```
+
+#### Krótki opis
+
+Zapamiętaj pierwszy element, zakończ jeśli jest pusta, początkiem listy  
+element będzie następny ( $n + 1$ ) w listej jednokierunkowej.  
 
 ## Pseudokod
 ```
-Algorytm(){
-       a, b, n   
-       i = 0, j = 0  
-       P[1000]
-       bool t
-       wprowadz(a, b, n)
-       
-       for( i; i < n; i++ )
-          wprowadz(P[i])
-       for( i=a; i<=b; i++ )
-       { 
-          t = true
-          for( j; j < n; j++ )
-              if( i % P[j] == 0 )
-              {
-                 t = false
-                 break
-              }
-              if(t) wyprowadz(i)
-       }
-       zakończ
- }
+pop(Wezel **head) {
+  if (*head == NULL) {
+    drukuj(Nie ma co usunąć.)
+  } else {
+    Wezel *tym = NULL
+    tym = (*head)->next;
+    free(*head)
+    *head = tym
+  }
+  zakończ
+}
 ```
 #### Program w C języku  
-[-klikni żeby zobaczyć](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/ProgramyProjeku/Algorytm.c)
+[-klikni żeby zobaczyć](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/ProgramyProjeku/lista.c)
 
 ## Złożoność obliczeniowa algorytmu
 
-Złożoność obliczeniowa algorytmu określa, jak wydajny jest algorytm,  
+Złożoność obliczeniowa algorytmu określa, jak wydajny jest algorytm, 
 ile musi on wykonać oprecaji w zależności ilości danych oraz ile potrzebuje pamięci.
 Złożoność obliczeniową dzielimy na złożoność pamięciową oraz złożoność czasową. 
 Ale do wymagań które są do algorytmu, to będziemy wykorzystowali złożoność czasową.  
 
 #### Złożoność czasową
 
-W naszym wypadku algorytm ma złożoność kwadratowa, czyli $O(n^{2})$, gdy dla danych  
-wejściowych o rozmiarze n liczba operacji w zależności od liczby elementów będzie wyrażona  
-wzorcem funkcji kwadratowej: $f(n)=an^{2}+bn+c$  
+W naszym przypadku tej implementacji usunięcie elementu z początku listy ma złożoność Ο(1),  
+czyli stała (od jednego do kilku operacji).  
 
-Gdy analizujemy przedstawiony przez mnie algorytm to możemy zauważyć, że program składa się  
-z dwóch pętli zagnieżdżonych (pętla w pętli), a każda z nich będzie miała liniową złożoność.  
+Złożoność stała, niezależna od liczby danych wejściowych. Mówimy, że problem o złożoności Ο(1) 
+możemy rozwiązać w stałym czasie niezależnie od wielkości danych wejściowych. Przykład problemu, 
+dla którego istnieje algorytm Ο(1)  
+
+Podsumowując program jest bardzej wydajny, iż mniejsza złożoność algorytmu, tym jest on bardziej wydajny.
 
 ## Poprawność całkowita
 
-Program jest częsciowy poprawny, ponieważ program znachodzi liczby niepodzielne przez dane liczby,    
-to możemy zobaczyć w pseudokodzie, gdzie jest pętla, jeśli jakiś dzielnik dzieli X to przechodzimy  
-do następnej liczby, w przyciwnym wypadku jeżeli żaden dzielnik nie dzieli X to wyprowadzamy je,     
-czyli program ma wejście i wyjście co jego robi częsciowo poprawny, ma także zastonowienie się, czyli    
-przedział [a, b] mają rol zastonawianie się programu, czyli ustaliamy granicy programu.  
+Program jest częsciowy poprawny, algorytm usuwania elementu z początku listy jednokierunkowej  
+ma wszystkie punkty, który musi mięć prawidłowy algorytm, czyli jednoznaczność (Każdy z
+jego kroków, a także dane wejściowe/wyjściowe mają jasne i dają tylko jedną wartość.)
+Dane wejściowe - czyli ma dobrze zdefiniowane dane wejściowe. Są wyjście, na KROKU5 program
+zakończyć się po skończonej liczbie kroków. Wykonalność i niezależność, jest wydajny ponieważ 
+złożoność jest stała i przy kompiliowaniu program pięknie działa i wypełnia swoją misję, czyli  
+usuwa element początkowy z list jednokierunkowej. 
 
-#### Przejdź do Projektu drugiego [(-klikni żeby zobaczyć)](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/projekt2.md)
+#### Przejdź do Projektu pierwszego [(-klikni żeby zobaczyć)](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/projekt1.md)
 
+## Literatura i Źródła
 
+#### Projekt 1
+
+- [Algorytmy i Struktury Dane](https://eduinf.waw.pl/inf/alg/001_search/0004.php)
+- [Algorytmy i Struktury Dane (Książka)](https://helion.pl/ksiazki/algorytmy-i-struktury-danych-lech-banachowski-wojciech-rytter-krzysztof-maria,e_0xyu.htm#format/e)
+- [Wikipedia](https://pl.wikipedia.org/wiki/Dzielnik)
+
+#### Projekt 2
+
+- [Algorytmy i Struktury Dane (Książka)](https://helion.pl/ksiazki/algorytmy-i-struktury-danych-lech-banachowski-wojciech-rytter-krzysztof-maria,e_0xyu.htm#format/e)
+- [Wikipedia](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
+- [Złożoność obliczeniowa](https://www.algorytm.edu.pl/matura-informatyka/zlozonosc-algorytmu)
+
+#### Projekt 3
+- [Prezetacja](http://staff.iiar.pwr.wroc.pl/wojciech.bozejko/elearning/Wyk3_listy.pdf)
+- [Algorytmy i Struktury Dane (Książka)](https://helion.pl/ksiazki/algorytmy-i-struktury-danych-lech-banachowski-wojciech-rytter-krzysztof-maria,e_0xyu.htm#format/e)
+
+#### Ogólna
+
+- [Github](https://github.com/)
+- [Replit](https://replit.com/~)
+- [VU Biblioteka](https://biblioteka.vu.lt/)
