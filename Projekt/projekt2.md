@@ -173,4 +173,4 @@ Dane wejściowe - czyli ma dobrze zdefiniowane dane wejściowe. Są wyjście, na
 zakończyć się po skończonej liczbie kroków. Wykonalność i niezależność, czyli podsomuwując  
 program działa.
 
-#### Przejdź do Projektu trzyciego [(-klikni żeby zobaczyć)](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/projekt2.md)
+#### Przejdź do Projektu trzyciego [(-klikni żeby zobaczyć)](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/projekt3.md)
