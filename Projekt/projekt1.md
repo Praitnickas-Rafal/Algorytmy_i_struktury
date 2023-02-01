@@ -8,8 +8,10 @@
 ### Data: 2023.01.29
 
 - [Zadanie](#zadanie)
-- [Chciwy algorytm](#chciwy)
-- [Algorytm śledzenia wstecznego](#algorytm)
+- [Rozwiązanie](#rozwiązanie)
+- [Pseudokod](#pseudokod)
+- [Żłożoność obliczeniowa algorytmu](#złożoność_obliczeniowa_algorytmu)
+- [Poprawność całkowita](#poprawnoś_ćcałkowita)
 
 ## Zadanie
 
@@ -128,4 +130,15 @@ wzorcem funkcji kwadratowej: $f(n)=an^{2}+bn+c$
 
 Gdy analizujemy przedstawiony przez mnie algorytm to możemy zauważyć, że program składa się  
 z dwóch pętli zagnieżdżonych (pętla w pętli), a każda z nich będzie miała liniową złożoność.  
-       
+
+## Poprawność całkowita
+
+Program jest częsciowy poprawny, ponieważ program znachodzi liczby niepodzielne przez dane liczby,    
+to możemy zobaczyć w pseudokodzie, gdzie jest pętla, jeśli jakiś dzielnik dzieli X to przechodzimy  
+do następnej liczby, w przyciwnym wypadku jeżeli żaden dzielnik nie dzieli X to wyprowadzamy je,     
+czyli program ma wejście i wyjście co jego robi częsciowo poprawny, ma także zastonowienie się, czyli    
+przedział [a, b] mają rol zastonawianie się programu, czyli ustaliamy granicy programu.  
+
+#### Przejdź do Projektu drugiego [(-klikni żeby zobaczyć)](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/projekt2.md)
+
+
