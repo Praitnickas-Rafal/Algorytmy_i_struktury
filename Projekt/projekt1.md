@@ -23,13 +23,13 @@ przechodzą w danym przedziale liczbowym i sprawdzeniu każdej z nich, czy
 spełnia wymagane warunki. Jeśli odpowiedz pozytywna, to znaleziona liczba    
 jest przekazywana na wyjście.  
 
-Wejście:  
+#### Wejście:  
 
 C - całkowitych liczby   
 a - początek przedziału, a należy do   
 b - koniec przedziału, b należy do C, a < b  
 
-Wyjście:  
+#### Wyjście:  
 
 Liczby z przedziału [a, b], które spełniają zadane warunek  
 
@@ -113,4 +113,19 @@ Algorytm(){
 #### Program w C języku  
 [-klikni żeby zobaczyć](https://github.com/Praitnickas-Rafal/Algorytmy_i_struktury/blob/main/Projekt/ProgramyProjeku/Algorytm.c)
 
+## Złożoność obliczeniowa algorytmu
 
+Złożoność obliczeniowa algorytmu określa, jak wydajny jest algorytm,  
+ile musi on wykonać oprecaji w zależności ilości danych oraz ile potrzebuje pamięci.
+Złożoność obliczeniową dzielimy na złożoność pamięciową oraz złożoność czasową. 
+Ale do wymagań które są do algorytmu, to będziemy wykorzystowali złożoność czasową.  
+
+#### Złożoność czasową
+
+W naszym wypadku algorytm ma złożoność kwadratowa, czyli $O(n^{2})$, gdy dla danych  
+wejściowych o rozmiarze n liczba operacji w zależności od liczby elementów będzie wyrażona  
+wzorcem funkcji kwadratowej: $f(n)=an^{2}+bn+c$  
+
+Gdy analizujemy przedstawiony przez mnie algorytm to możemy zauważyć, że program składa się  
+z dwóch pętli zagnieżdżonych (pętla w pętli), a każda z nich będzie miała liniową złożoność.  
+       
