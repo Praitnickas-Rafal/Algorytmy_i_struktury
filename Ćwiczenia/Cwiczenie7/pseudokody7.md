@@ -7,7 +7,7 @@ swap( *x, *y)
   *x = *y
   *y = tymczasowa
 }
-  
+// x, y - zmienne
 ```
 # Pseudokod do Permutacji
 ```
@@ -23,6 +23,7 @@ permute( *a, b, x){
       }
   }
 }
+// a - Ciąg, b - Początkowy indeks łańcucha, x - Indeks końcowy łańcucha 
 ```
 # Pseudokod Convert
 ```
@@ -37,7 +38,7 @@ permute( *a, b, x){
    }
    return binary
  }
-
+//number to cyfra która zostaje konvertowana, wyjście binary
 ```
 # Pseudokod Greya
 ```
