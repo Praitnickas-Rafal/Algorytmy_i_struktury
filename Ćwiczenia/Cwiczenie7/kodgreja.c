@@ -17,15 +17,22 @@ int convert(int number) {
 //Testowanie programu ->
 int main(void) {
   int gray, top;
-  int bity = 2; 
-  
+  int bity;
+
+  printf("Wprowadz ilos bitów:");
+  scanf("%d", &bity);
+  //Sprawdzenie
+  if(bity>0){
   top = pow(2, bity) - 1;
   
   for (int i = 0; i <= top; i++) {
     gray = i ^ (i >> 1);
     printf("%d\n", convert(gray));
   }
+  }
+  else{
+    printf("Bit, niemoży być mniej równie 1!");
+  }
   return 0;
 }
-
 //Console: 0 1 11 10, przy podaniu parametru 2 (bity)
